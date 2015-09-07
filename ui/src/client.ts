@@ -115,7 +115,7 @@ module client {
   var server = { connected: false, queue: [], initialized: false, lastSent: [], ws: null, dead: false };
   function connectToServer() {
     var queue = server.queue;
-    var wsAddress = "ws://localhost:2794";
+    var wsAddress = "ws://${window.location.hostname}:2794";
     if(window.location.protocol !== "file:") {
       wsAddress = `ws://${window.location.hostname}:2794`;
     }
